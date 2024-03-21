@@ -1,0 +1,44 @@
+/* App.css */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 170px;
+  height: 290px;
+  border-radius: 20px;
+  background-color: black; /* Relleno negro para la imagen recortada */
+
+}
+
+.imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+  transition: all 0.3s ease;
+}
+
+.image-container:hover .imagen {
+  filter: brightness(100%);
+  transform: scale(1.2);
+}
+
+.titulo {
+  font-family: sans-serif, Verdana, Geneva;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 1;
+  transition: opacity .3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 28px;
+  text-shadow: 1px 1px #858585;
+  z-index: 3;
+}
+
+.slider-slide:hover .titulo {
+  opacity: 0;
+}
